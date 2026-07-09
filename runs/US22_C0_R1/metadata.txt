@@ -1,0 +1,12 @@
+﻿Run_ID: US22_C0_R1
+US_ID: US22
+Condition: C0
+Ordem: 19
+Start: 2026-07-08T23:11:21
+End: 2026-07-08T23:11:43
+Run path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_C0_R1
+Prompt path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\scripts\clarify-prompt.txt
+Output path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_C0_R1\output.md
+Clarification full path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_C0_R1\clarification-full.md
+Log path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_C0_R1\codex-log.txt
+Status: Valid

@@ -1,0 +1,12 @@
+﻿Run_ID: US02_CS_R1
+US_ID: US02
+Condition: CS
+Ordem: 6
+Start: 2026-07-08T23:05:09
+End: 2026-07-08T23:05:43
+Run path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US02_CS_R1
+Prompt path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\scripts\clarify-prompt.txt
+Output path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US02_CS_R1\output.md
+Clarification full path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US02_CS_R1\clarification-full.md
+Log path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US02_CS_R1\codex-log.txt
+Status: Valid

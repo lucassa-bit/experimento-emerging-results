@@ -1,0 +1,20 @@
+/speckit.clarify Experimental collection mode.
+
+Use only:
+- the current spec.md already present in this run folder;
+- ./experiment-input/user-story.md;
+- ./experiment-input/context.md, if it exists.
+
+Treat ./experiment-input/context.md as the only additional context available for this experimental condition.
+If ./experiment-input/context.md does not exist, treat the User Story as having no additional context.
+
+Do not answer the clarification questions.
+Do not resolve missing information.
+Do not infer missing answers from outside the provided files.
+Do not use web search.
+Do not create implementation plans, tasks, or code.
+
+Return only the clarification output.
+Produce at most five prioritized clarification questions.
+Each unresolved question must be explicitly marked with [NEEDS CLARIFICATION].
+If no clarification is needed, write NO_CLARIFICATION_NEEDED.

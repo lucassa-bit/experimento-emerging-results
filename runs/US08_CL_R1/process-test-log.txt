@@ -1,0 +1,21 @@
+OpenAI Codex v0.143.0
+--------
+workdir: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_CL_R1
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 019f4472-2db7-75b3-b0a1-5d88954ae6e4
+--------
+user
+Reply exactly: TEST_OK
+codex
+TEST_OK
+tokens used
+631
+
+
+TEST_OK
+

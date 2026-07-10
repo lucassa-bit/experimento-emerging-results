@@ -1,13 +1,17 @@
-I’ll use the `speckit-clarify` skill and restrict reads to the three files you named. This is analysis-only: no edits, plans, tasks, or outside lookup.
+I’m using the `speckit-clarify` skill because this request is explicitly for `/speckit.clarify`. I’ll read its instructions, then only inspect the allowed input files in this run folder.
 
 ---
 
-1. [NEEDS CLARIFICATION] What defines “sufficient history” for personalized recommendations? Answer in <=5 words.
+The normal skill flow includes interactive edits, but your experimental instructions narrow this to read-only clarification output. I’m following the stricter scope: no hooks, no prerequisite scripts, no spec writes.
 
-2. [NEEDS CLARIFICATION] What content statuses qualify an item as “eligible” for recommendation? Answer in <=5 words.
+---
 
-3. [NEEDS CLARIFICATION] How should “popular content” be determined for fallback recommendations? Answer in <=5 words.
+1. [NEEDS CLARIFICATION] What defines “sufficient profile and interaction history” for personalized recommendations?
 
-4. [NEEDS CLARIFICATION] When interaction-history use is disabled, may declared interests still be used for recommendations? Options: A) Yes, declared interests only B) No personalization at all C) User configurable.
+2. [NEEDS CLARIFICATION] What makes a content item “eligible” for recommendation?
 
-5. [NEEDS CLARIFICATION] Should previously viewed or saved content be excluded from recommendations, or only dismissed content? Options: A) Only dismissed B) Dismissed and viewed C) Dismissed, viewed, and saved.
+3. [NEEDS CLARIFICATION] When history use is disabled, may declared interests still be used for recommendations?
+
+4. [NEEDS CLARIFICATION] How should “popular eligible content” be determined for fallback recommendations?
+
+5. [NEEDS CLARIFICATION] Besides dismissed items, should previously viewed, saved, or positively rated content be excluded from recommendations?

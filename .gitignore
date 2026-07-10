@@ -69,7 +69,6 @@ dist/
 .turbo/
 
 # .NET
-bin/
 obj/
 *.user
 *.suo

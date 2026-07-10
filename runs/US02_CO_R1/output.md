@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] Should search results include only active facilities, or only facilities that are both active and verified? Options: A) active only, B) active and verified.
+1. [NEEDS CLARIFICATION] What facility details must appear in each search result so users can decide which facilities to consider? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] What ZIP code formats are valid? Options: A) 5-digit US ZIP only, B) 5-digit ZIP and ZIP+4.
+2. [NEEDS CLARIFICATION] Which ZIP code formats are valid: 5-digit only, ZIP+4, or both?
 
-3. [NEEDS CLARIFICATION] What facility details must each result display so the user can decide which facilities to consider? Answer in <=5 words.
+3. [NEEDS CLARIFICATION] When multiple facilities have the same distance, how should ties be ordered? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] When multiple facilities have the same distance, how should they be ordered? Options: A) facility name ascending, B) directory order, C) no guaranteed order.
+4. [NEEDS CLARIFICATION] What should happen if the facility directory or geocoding lookup is unavailable? Answer in <=5 words.
 
-5. [NEEDS CLARIFICATION] Should the 25-mile radius and 20-result limit be fixed product rules or configurable defaults? Options: A) fixed rules, B) configurable defaults.
+5. [NEEDS CLARIFICATION] Does “active facilities” require only active status, or both active and verified status?

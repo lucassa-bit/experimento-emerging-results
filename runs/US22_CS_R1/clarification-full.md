@@ -1,17 +1,13 @@
-Using `speckit-clarify` for the clarification workflow. I’ll read its instructions, then inspect only the permitted spec and experiment input files.
+I’ll use the `speckit-clarify` skill and only read the allowed local files. Since the workspace is read-only here, I’ll produce the clarification output without editing the spec.
 
 ---
 
-I’m treating the experimental constraints as narrower than the normal clarify workflow: no prerequisite script, no web, no spec edits, and no inferred answers. I’m only reading the allowed files to identify unresolved questions.
+1. [NEEDS CLARIFICATION] What minimum profile/history data qualifies a user for personalized similar-profile recommendations?
 
----
+2. [NEEDS CLARIFICATION] Which behavioral events from the Interaction History Service count as eligible signals for similarity: viewed, saved, positive feedback, or another defined subset?
 
-1. [NEEDS CLARIFICATION] What is the threshold for “sufficient profile and interaction history”? Answer in <=5 words.
+3. [NEEDS CLARIFICATION] When interaction-history use is disabled, may recommendations still use declared interests from the Profile Service?
 
-2. [NEEDS CLARIFICATION] Which behavioral events count as “eligible” for similarity: viewed only, saved/positive feedback only, or all listed events?
+4. [NEEDS CLARIFICATION] How should non-personalized “popular eligible content” be determined?
 
-3. [NEEDS CLARIFICATION] What makes a content item “eligible” for recommendation? Answer in <=5 words.
-
-4. [NEEDS CLARIFICATION] How should “popular eligible content” be ranked for fallback recommendations? Answer in <=5 words.
-
-5. [NEEDS CLARIFICATION] When interaction-history use is disabled, may declared interests still be used for personalization? Answer: yes/no.
+5. [NEEDS CLARIFICATION] What makes a content item eligible or ineligible for recommendation from the Content Catalog?

@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] When is the required estimator set fixed for a voting round: at round start, continuously from Presence Service at reveal time, or another rule?
+1. [NEEDS CLARIFICATION] Is the required estimator set fixed when a voting round starts, or recalculated from the Presence Service at reveal time?
 
-2. [NEEDS CLARIFICATION] If an estimator submits and then disconnects before reveal, should their submitted estimate still be revealed?
+2. [NEEDS CLARIFICATION] If an estimator disconnects before submitting, should their missing estimate immediately stop blocking reveal, or only after the moderator closes voting?
 
-3. [NEEDS CLARIFICATION] Can active estimators change their estimate before reveal, or is the first submission final?
+3. [NEEDS CLARIFICATION] Before reveal, may an estimator change or replace their hidden submitted estimate?
 
-4. [NEEDS CLARIFICATION] When the moderator closes voting with no submitted estimates, should the system create an empty reveal event or leave the round unrevealed?
+4. [NEEDS CLARIFICATION] When the moderator closes voting with zero submitted estimates, should the system reveal an empty result set or leave the round unrevealed?
 
-5. [NEEDS CLARIFICATION] Should participants who connect after reveal immediately see the revealed estimates for that round?
+5. [NEEDS CLARIFICATION] Should participants who reconnect or join after reveal see the already revealed estimates for that round?

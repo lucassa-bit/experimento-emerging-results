@@ -1,13 +1,17 @@
-Using `speckit-clarify` to inspect the existing spec and permitted experiment inputs, then I’ll return only the requested clarification output.
+Using `speckit-clarify` for this clarification-only pass. I’ll read its instructions, then inspect only the allowed files in this run folder.
 
 ---
 
-1. [NEEDS CLARIFICATION] What exact minimum data qualifies a user as having “sufficient history” for personalized recommendations?
+The experiment constraints override the normal interactive/editing parts of the skill: I’ll only produce unanswered clarification questions and won’t modify the spec or use outside project context.
 
-2. [NEEDS CLARIFICATION] What makes a content item “eligible” beyond not being dismissed by the current user?
+---
 
-3. [NEEDS CLARIFICATION] How should “popular eligible content” be calculated for fallback recommendations?
+1. [NEEDS CLARIFICATION] What threshold defines “sufficient history” for personalized recommendations? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] When a user disables interaction-history use, should their history also be excluded from similarity calculations for recommending content to other users?
+2. [NEEDS CLARIFICATION] When interaction-history use is disabled, may declared interests still be used for recommendations? Answer: yes/no.
 
-5. [NEEDS CLARIFICATION] What should happen when fewer than 10 eligible recommendations are available: return fewer items, fill with fallback items, or show a no-results state?
+3. [NEEDS CLARIFICATION] What makes catalog content “eligible” for recommendation beyond not being dismissed? Answer in <=5 words.
+
+4. [NEEDS CLARIFICATION] How is “popular content” determined for fallback recommendations? Answer in <=5 words.
+
+5. [NEEDS CLARIFICATION] What should the user see when no eligible recommendations are available? Answer in <=5 words.

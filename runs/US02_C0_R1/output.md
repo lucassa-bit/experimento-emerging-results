@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] What facility details must each search result display so users can decide which facilities to consider?
+1. [NEEDS CLARIFICATION] Which facility details must each search result display so the user can decide which facilities to consider? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] Which ZIP code formats are valid: 5-digit only, ZIP+4, or both?
+2. [NEEDS CLARIFICATION] What ZIP code formats are valid for search input? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] How should facilities with the same calculated distance be ordered?
+3. [NEEDS CLARIFICATION] What data source provides facility records and their active/verified status? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] Should results include all recycling facilities, or only facilities matching specific accepted material types?
+4. [NEEDS CLARIFICATION] Should results include material types accepted by each facility? Answer: yes or no.
 
-5. [NEEDS CLARIFICATION] What should happen when ZIP code geocoding fails for a syntactically valid ZIP code?
+5. [NEEDS CLARIFICATION] How should facilities at the same distance be ordered? Answer in <=5 words.

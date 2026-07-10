@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] When an available-place offer expires or is declined, should the system automatically offer the place to the next eligible waitlisted attendee?
+1. [NEEDS CLARIFICATION] When a waitlist offer expires or is declined, should the system automatically notify the next eligible attendee? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] While an attendee has a 24-hour offer, is the available place reserved exclusively for that attendee?
+2. [NEEDS CLARIFICATION] During the 24-hour offer window, is the available place reserved for the notified attendee? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] If multiple attendees join at the same timestamp precision, what tie-breaker should determine waitlist order?
+3. [NEEDS CLARIFICATION] If two attendees join at the same timestamp, what tie-breaker determines waitlist order? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] When the first waitlisted attendee is no longer eligible, should the system skip them automatically or require coordinator removal first?
+4. [NEEDS CLARIFICATION] When should attendee eligibility be rechecked: only on join, only before offer, or both? Answer in <=5 words.
 
-5. [NEEDS CLARIFICATION] What notification channel is required for available-place offers?
+5. [NEEDS CLARIFICATION] What information must be recorded for coordinator removals besides the reason? Answer in <=5 words.

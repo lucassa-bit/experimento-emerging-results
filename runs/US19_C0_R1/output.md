@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] What criteria determine whether an attendee is eligible to join or remain on a training waitlist?
+1. [NEEDS CLARIFICATION] Should this feature include only joining the waitlist, or also downstream offer notification, acceptance, expiration, enrollment, and coordinator removal workflows?
 
-2. [NEEDS CLARIFICATION] When an offer expires or is declined, should the system automatically offer the place to the next eligible attendee?
+2. [NEEDS CLARIFICATION] What exactly makes an attendee “eligible” to join a training waitlist?
 
-3. [NEEDS CLARIFICATION] How should waitlist order be resolved when two successful entries have the same timestamp?
+3. [NEEDS CLARIFICATION] When two attendees join at nearly the same time, what tie-breaker should determine waitlist order?
 
-4. [NEEDS CLARIFICATION] What notification method is required for available-place offers?
+4. [NEEDS CLARIFICATION] If an attendee already has an active waitlist entry for the same class, should the system reject the new attempt, refresh the existing entry, or show the existing waitlist status?
 
-5. [NEEDS CLARIFICATION] What information must be recorded when a coordinator removes a waitlist entry?
+5. [NEEDS CLARIFICATION] How should an attendee be “considered when a place becomes available”: manual coordinator review, automatic offer to the first eligible attendee, or another process?

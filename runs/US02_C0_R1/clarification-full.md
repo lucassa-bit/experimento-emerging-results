@@ -1,17 +1,17 @@
-Using `speckit-clarify` for this turn. I’ll read its instructions, then inspect only the allowed spec and experiment input files.
+I’ll use the `speckit-clarify` skill and only read the allowed local files. Since the workspace is read-only, I’ll return the clarification output without editing the spec.
 
 ---
 
-The command-specific constraints override the interactive/write-back parts of the skill: I’m only identifying unresolved questions from the allowed files and will not modify the spec.
+I’ve loaded the skill instructions. For this experimental mode I’m applying your stricter constraints over the normal interactive/write-back flow: read only the allowed files, do not answer or integrate clarifications, and output only unresolved questions.
 
 ---
 
-1. [NEEDS CLARIFICATION] What facility details must each search result display so users can decide which facilities to consider?
+1. [NEEDS CLARIFICATION] Which facility details must each search result display so the user can decide which facilities to consider? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] Which ZIP code formats are valid: 5-digit only, ZIP+4, or both?
+2. [NEEDS CLARIFICATION] What ZIP code formats are valid for search input? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] How should facilities with the same calculated distance be ordered?
+3. [NEEDS CLARIFICATION] What data source provides facility records and their active/verified status? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] Should results include all recycling facilities, or only facilities matching specific accepted material types?
+4. [NEEDS CLARIFICATION] Should results include material types accepted by each facility? Answer: yes or no.
 
-5. [NEEDS CLARIFICATION] What should happen when ZIP code geocoding fails for a syntactically valid ZIP code?
+5. [NEEDS CLARIFICATION] How should facilities at the same distance be ordered? Answer in <=5 words.

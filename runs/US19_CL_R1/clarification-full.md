@@ -1,13 +1,17 @@
-I’ll use the `speckit-clarify` skill and restrict inputs to the spec plus the two experiment-input files exactly as requested.
+I’m using the `speckit-clarify` skill because the request is specifically to produce clarification questions from the existing spec inputs.
 
 ---
 
-1. [NEEDS CLARIFICATION] When an available-place offer expires or is declined, should the system automatically offer the place to the next eligible waitlisted attendee?
+I’ll restrict this to the three allowed inputs and only identify unresolved questions. I won’t run the normal interactive/write-back parts of the clarify workflow because your experimental instructions explicitly exclude them.
 
-2. [NEEDS CLARIFICATION] While an attendee has a 24-hour offer, is the available place reserved exclusively for that attendee?
+---
 
-3. [NEEDS CLARIFICATION] If multiple attendees join at the same timestamp precision, what tie-breaker should determine waitlist order?
+1. [NEEDS CLARIFICATION] When a waitlist offer expires or is declined, should the system automatically notify the next eligible attendee? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] When the first waitlisted attendee is no longer eligible, should the system skip them automatically or require coordinator removal first?
+2. [NEEDS CLARIFICATION] During the 24-hour offer window, is the available place reserved for the notified attendee? Answer in <=5 words.
 
-5. [NEEDS CLARIFICATION] What notification channel is required for available-place offers?
+3. [NEEDS CLARIFICATION] If two attendees join at the same timestamp, what tie-breaker determines waitlist order? Answer in <=5 words.
+
+4. [NEEDS CLARIFICATION] When should attendee eligibility be rechecked: only on join, only before offer, or both? Answer in <=5 words.
+
+5. [NEEDS CLARIFICATION] What information must be recorded for coordinator removals besides the reason? Answer in <=5 words.

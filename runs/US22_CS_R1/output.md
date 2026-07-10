@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] What is the threshold for “sufficient profile and interaction history”? Answer in <=5 words.
+1. [NEEDS CLARIFICATION] What minimum profile/history data qualifies a user for personalized similar-profile recommendations?
 
-2. [NEEDS CLARIFICATION] Which behavioral events count as “eligible” for similarity: viewed only, saved/positive feedback only, or all listed events?
+2. [NEEDS CLARIFICATION] Which behavioral events from the Interaction History Service count as eligible signals for similarity: viewed, saved, positive feedback, or another defined subset?
 
-3. [NEEDS CLARIFICATION] What makes a content item “eligible” for recommendation? Answer in <=5 words.
+3. [NEEDS CLARIFICATION] When interaction-history use is disabled, may recommendations still use declared interests from the Profile Service?
 
-4. [NEEDS CLARIFICATION] How should “popular eligible content” be ranked for fallback recommendations? Answer in <=5 words.
+4. [NEEDS CLARIFICATION] How should non-personalized “popular eligible content” be determined?
 
-5. [NEEDS CLARIFICATION] When interaction-history use is disabled, may declared interests still be used for personalization? Answer: yes/no.
+5. [NEEDS CLARIFICATION] What makes a content item eligible or ineligible for recommendation from the Content Catalog?

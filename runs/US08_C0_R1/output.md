@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] Who is allowed to see revealed estimates after the reveal condition is met: all connected participants including spectators, only active estimators, or only the moderator plus estimators?
+1. [NEEDS CLARIFICATION] When is the required estimator set fixed for a voting round: at round start, dynamically based on currently connected estimators, or only after each participant’s role is confirmed?
 
-2. [NEEDS CLARIFICATION] If an active estimator disconnects after submitting but before reveal, should their submitted estimate still be revealed?
+2. [NEEDS CLARIFICATION] If an active estimator disconnects before submitting, should their absence immediately reduce the completion count and possibly trigger reveal?
 
-3. [NEEDS CLARIFICATION] If the moderator closes voting when no estimates have been submitted, what should the system reveal or display for that round?
+3. [NEEDS CLARIFICATION] Are spectators allowed to see revealed estimates once the reveal condition is met, or only active estimators and the moderator?
 
-4. [NEEDS CLARIFICATION] When an active estimator disconnects before submitting, should the system immediately exclude them from the completion count or only after a defined timeout/manual action?
+4. [NEEDS CLARIFICATION] If the moderator closes voting when no estimates have been submitted, should the round enter a revealed/closed state with no estimates, or remain unrevealed?
 
-5. [NEEDS CLARIFICATION] Should participants be able to see who has submitted before reveal, while estimate values remain hidden?
+5. [NEEDS CLARIFICATION] After estimates are revealed, may late-joining or reconnected participants see the revealed estimates for that round?

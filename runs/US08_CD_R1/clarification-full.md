@@ -1,17 +1,9 @@
-Using `speckit-clarify` for the clarification-only workflow. I’ll read its instructions, then inspect only the allowed input files.
+1. [NEEDS CLARIFICATION] When is the set of “active estimators” determined for a voting round: at round start, dynamically from currently connected eligible participants, or another rule?
 
----
+2. [NEEDS CLARIFICATION] If an active estimator disconnects after submitting but before reveal, should their submitted estimate still be revealed?
 
-I’ll follow the experimental constraints over the normal interactive parts: no hooks, no prerequisite script, no edits, and no inferred answers. Next I’m reading only `spec.md`, `experiment-input/user-story.md`, and `experiment-input/context.md` if present.
+3. [NEEDS CLARIFICATION] If an estimator submits, disconnects, and later reconnects before reveal, should they count as submitted for completion?
 
----
+4. [NEEDS CLARIFICATION] Before reveal, may an estimator change or replace their hidden estimate, or is the first submission final?
 
-1. [NEEDS CLARIFICATION] Is the set of required estimators fixed when the voting round starts, or recalculated dynamically as participants connect/disconnect during the round?
-
-2. [NEEDS CLARIFICATION] If an estimator submits an estimate and then disconnects before reveal, should their stored estimate still be revealed?
-
-3. [NEEDS CLARIFICATION] When the moderator closes voting with zero submitted estimates, should the round enter a revealed/closed state or remain unrevealed?
-
-4. [NEEDS CLARIFICATION] After reveal, should spectators see the revealed estimates, or only active estimators and moderators?
-
-5. [NEEDS CLARIFICATION] Before reveal, may participants see who has submitted without seeing estimate values?
+5. [NEEDS CLARIFICATION] When the moderator closes voting with no submitted estimates, should the round reveal an empty result, remain unrevealed, or enter a cancelled/closed state?

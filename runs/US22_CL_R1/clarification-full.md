@@ -1,17 +1,17 @@
-I’ll use the `speckit-clarify` workflow, constrained to the three allowed local inputs and without writing changes.
+I’ll use the `speckit-clarify` skill and restrict the review to the three allowed local inputs.
 
 ---
 
-I’ve read the clarify skill. The user’s experimental constraints override the interactive/write-back parts here, so I’m only scanning the allowed files and returning unresolved questions.
+I’m reading only the current `spec.md` plus the permitted experiment inputs, then I’ll emit unresolved clarification questions without modifying files.
 
 ---
 
-1. [NEEDS CLARIFICATION] Should recommendations come from content authored/shared by similar-profile users, or from content those similar-profile users interacted with?
+1. [NEEDS CLARIFICATION] What threshold defines “sufficient profile and interaction history” for personalized recommendations? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] What minimum profile/history threshold defines “sufficient history” for personalized recommendations?
+2. [NEEDS CLARIFICATION] Which interaction types count as “positive feedback” for similarity scoring? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] Which interaction types count as positive recommendation signals: views, saves, explicit positive feedback, or another defined subset?
+3. [NEEDS CLARIFICATION] What makes content “eligible” for recommendation? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] How should “popular eligible content” be determined for fallback recommendations?
+4. [NEEDS CLARIFICATION] How should recommendation ranking combine interest similarity and interaction-pattern similarity? Answer in <=5 words.
 
-5. [NEEDS CLARIFICATION] When a user disables interaction-history use, should their history be excluded only from recommendations for them, or also from similarity/recommendation calculations for other users?
+5. [NEEDS CLARIFICATION] What user-visible state should appear when no eligible recommendations are available? Answer in <=5 words.

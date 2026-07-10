@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] When a notified attendee does not accept within 24 hours, should the next eligible attendee automatically receive an offer, or should a coordinator manually trigger the next offer?
+1. [NEEDS CLARIFICATION] When an offered place expires or is declined, should the system automatically offer it to the next eligible waitlisted attendee, or should coordinator action be required?
 
-2. [NEEDS CLARIFICATION] If the first waitlisted attendee is ineligible when a place becomes available, should the system skip them automatically or require coordinator removal before continuing?
+2. [NEEDS CLARIFICATION] If two attendees successfully join at the same timestamp precision, what tie-breaker determines waitlist order? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] What should happen when an attendee accepts a waitlist offer but the place is no longer available: reject acceptance, hold the place during the 24-hour window, or require coordinator review?
+3. [NEEDS CLARIFICATION] What makes an attendee “eligible” for joining or remaining on a training waitlist? Answer in <=5 words.
 
-4. [NEEDS CLARIFICATION] What notification channel is required for available-place offers: email, in-app notification, SMS, or unspecified?
+4. [NEEDS CLARIFICATION] How should the system notify an attendee about an available-place offer? Answer in <=5 words.
 
-5. [NEEDS CLARIFICATION] What timestamp should determine first-come, first-served order when simultaneous joins occur: server acceptance time, database commit time, or another defined sequence?
+5. [NEEDS CLARIFICATION] After a coordinator removes a waitlist entry, should that attendee be allowed to join the same waitlist again if they later become eligible?

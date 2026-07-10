@@ -1,9 +1,9 @@
-1. [NEEDS CLARIFICATION] What defines attendee eligibility for joining or receiving a waitlist offer? Answer in <=5 words.
+1. [NEEDS CLARIFICATION] What eligibility rules determine whether an attendee may join or remain on a waitlist? Answer in <=5 words.
 
-2. [NEEDS CLARIFICATION] If an offered place expires after 24 hours, should the system automatically offer it to the next eligible waitlisted attendee? Answer: Yes/No.
+2. [NEEDS CLARIFICATION] If two successful waitlist entries have the same timestamp, how should their order be determined? Answer in <=5 words.
 
-3. [NEEDS CLARIFICATION] How should waitlist order be resolved when two successful entries have the same timestamp? Answer in <=5 words.
+3. [NEEDS CLARIFICATION] When a waitlist offer expires or is declined, should the next eligible attendee automatically receive an offer? Answer: yes/no.
 
-4. [NEEDS CLARIFICATION] When the first waitlisted attendee is no longer eligible, should they be skipped automatically or require coordinator removal first? Answer: Automatically skipped / Coordinator removal required.
+4. [NEEDS CLARIFICATION] Should an attendee be able to join multiple waitlists for different training classes at the same time? Answer: yes/no.
 
-5. [NEEDS CLARIFICATION] What notification channel is required for available-place offers? Answer in <=5 words.
+5. [NEEDS CLARIFICATION] What information must be recorded when a coordinator removes a waitlist entry? Answer in <=5 words.

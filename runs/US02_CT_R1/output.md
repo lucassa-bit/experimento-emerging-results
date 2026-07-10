@@ -1,9 +1,5 @@
-1. [NEEDS CLARIFICATION] What ZIP code formats must be accepted as valid search input: 5-digit US ZIP only, ZIP+4, or another postal-code format?
-
-2. [NEEDS CLARIFICATION] What facility information must appear in each search result so the user can decide which facilities to consider?
-
-3. [NEEDS CLARIFICATION] If the Geocoding Service fails or is unavailable, what user-facing outcome should occur?
-
-4. [NEEDS CLARIFICATION] If multiple facilities have the same calculated distance, what secondary ordering rule should be used?
-
-5. [NEEDS CLARIFICATION] Should searches be limited to ZIP codes supported by the Facility Directory, or should any geocodable ZIP code be accepted and return no results when outside coverage?
+1. [NEEDS CLARIFICATION] Which ZIP code formats must be accepted: 5-digit only, ZIP+4, or both?
+2. [NEEDS CLARIFICATION] What facility details must each search result display, such as name, address, distance, contact info, or accepted materials?
+3. [NEEDS CLARIFICATION] How should the system respond if the Geocoding Service or Facility Directory is unavailable?
+4. [NEEDS CLARIFICATION] How should facilities with the same calculated distance be ordered?
+5. [NEEDS CLARIFICATION] Should submitted ZIP codes or search activity be stored, and if so, for what purpose?

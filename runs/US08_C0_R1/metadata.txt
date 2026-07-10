@@ -1,11 +1,11 @@
-﻿Run_ID: US08_C0_R1
+Run_ID: US08_C0_R1
 US_ID: US08
 Condition: C0
-Ordem: 3
-Start: 2026-07-08T23:03:43
-End: 2026-07-08T23:04:05
+Ordem: 22
+Start: 2026-07-09T00:27:10
+End: 2026-07-09T00:27:36
 Run path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_C0_R1
-Prompt path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\scripts\clarify-prompt.txt
+Prompt path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\scripts\clarification-gen\clarify-prompt.txt
 Output path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_C0_R1\output.md
 Clarification full path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_C0_R1\clarification-full.md
 Log path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_C0_R1\codex-log.txt

@@ -1,6 +1,6 @@
 OpenAI Codex v0.143.0
 --------
-workdir: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US08_CL_R1
+workdir: runs/US08_CL_R1
 model: gpt-5.5
 provider: openai
 approval: never

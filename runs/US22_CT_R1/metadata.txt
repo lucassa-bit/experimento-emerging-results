@@ -4,9 +4,9 @@ Condition: CT
 Ordem: 11
 Start: 2026-07-09T00:22:23
 End: 2026-07-09T00:22:45
-Run path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_CT_R1
-Prompt path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\scripts\clarification-gen\clarify-prompt.txt
-Output path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_CT_R1\output.md
-Clarification full path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_CT_R1\clarification-full.md
-Log path: C:\Users\lucas\OneDrive\Documentos\experimento-emerging-results\runs\US22_CT_R1\codex-log.txt
+Run path: runs/US22_CT_R1
+Prompt path: scripts/clarification-gen/clarify-prompt.txt
+Output path: runs/US22_CT_R1/output.md
+Clarification full path: runs/US22_CT_R1/clarification-full.md
+Log path: runs/US22_CT_R1/codex-log.txt
 Status: Valid

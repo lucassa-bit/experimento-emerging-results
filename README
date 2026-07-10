@@ -1,0 +1,301 @@
+# Context Dependency in LLM-Based Requirements Clarification
+
+Este repositório contém os materiais experimentais, as 24 execuções do workflow de clarificação, os dados extraídos e os scripts usados para reproduzir o pipeline de coleta e processamento.
+
+## Visão geral do estudo
+
+O estudo investiga como diferentes tipos de contexto afetam o comportamento de clarificação de um agente SDD (Specification-Driven Development) baseado em LLM, operacionalizado via [Spec Kit](https://github.com/github/spec-kit) e o comando `/speckit.clarify`.
+
+| Dimensão | Valor |
+|----------|-------|
+| User Stories | 4 (US02, US08, US19, US22) |
+| Condições | 6 (C0, CL, CO, CD, CS, CT) |
+| Execuções | 24 (1 por par US × condição) |
+| Perguntas brutas extraídas | 177 (média ≈ 7,4 por execução; min 3, max 10) |
+
+### Perguntas de pesquisa
+
+- **RQ1.** Como a informação contextual afeta o número de lacunas informativas necessárias e não respondidas?
+- **RQ2.** Em que medida contextos léxico, operacional, decisório e sistêmico eliminam lacunas associadas à sua função informacional?
+- **RQ3.** Quais padrões de persistência, redundância e emergência são observados após a introdução de contexto?
+
+### User Stories e domínios
+
+| ID | Domínio | Funcionalidade principal | Dataset de origem |
+|----|---------|--------------------------|-------------------|
+| US02 | Gestão de resíduos e reciclagem | Busca de instalações próximas | G04 Recycling |
+| US08 | Estimativa ágil de software | Revelação simultânea de estimativas | G13 Planning Poker |
+| US19 | Gestão de treinamentos | Entrada em lista de espera | G21 BADCamp |
+| US22 | Gestão de eventos | Recuperação de participantes para comunicação pré-evento | G28 Zooniverse |
+
+As User Stories derivam do corpus [Mendeley User Story dataset](https://data.mendeley.com/datasets/7zbk8zsd8y/1). Os arquivos-fonte estão em `datasets/`; a proveniência de cada US está documentada em `materials/<US_ID>/user-story.md`.
+
+### Condições experimentais
+
+| Código | Contexto fornecido ao agente |
+|--------|------------------------------|
+| **C0** | Apenas a User Story (sem contexto adicional) |
+| **CL** | Contexto léxico — termos e expressões de domínio |
+| **CO** | Contexto operacional — regras, limites e exceções |
+| **CD** | Contexto decisório — decisões anteriores e alternativas rejeitadas |
+| **CS** | Contexto sistêmico — atores, dependências, interfaces |
+| **CT** | União literal de CL + CO + CD + CS |
+
+Os blocos de contexto estão em `materials/<US_ID>/` (`lexical.md`, `operational.md`, `decisional.md`, `systemic.md`, `total.md`).
+
+---
+
+## Estrutura do repositório
+
+```
+.
+├── baselines/              # spec.md e checklists de referência por User Story
+├── collected-data/         # dados agregados (CSV)
+├── datasets/               # User Stories originais do corpus Mendeley
+├── environment/            # registro do ambiente de execução
+├── materials/              # User Stories auditadas e blocos de contexto
+├── runs/                   # 24 pastas de execução (USxx_<COND>_R1)
+├── scripts/                # pipeline de execução e processamento
+│   ├── bin/                # wrappers (.bat / .sh)
+│   ├── clarification-gen/  # runner Codex + prompt experimental
+│   ├── clarification-processing/
+│   ├── check-outputs/
+│   └── lib/
+└── .specify/               # configuração Spec Kit (constitution, templates, skills)
+```
+
+### Conteúdo de cada pasta de execução (`runs/<Run_ID>/`)
+
+| Arquivo / pasta | Descrição |
+|-----------------|-----------|
+| `spec.md` | Especificação base gerada a partir da User Story |
+| `experiment-input/user-story.md` | User Story da condição |
+| `experiment-input/context.md` | Contexto adicional (ausente em C0) |
+| `output.md` | Saída final do Codex |
+| `clarification-full.md` | Transcrição consolidada da clarificação |
+| `codex-log.txt` | Log completo da sessão Codex |
+| `metadata.txt` | Metadados de execução (timestamps, status) |
+| `checklists/requirements.md` | Checklist gerado pelo workflow |
+
+Convenção de nomenclatura: `US<NN>_<COND>_R<R>` — ex.: `US02_CL_R1`.
+
+---
+
+## Pré-requisitos
+
+### Ferramentas
+
+| Ferramenta | Versão usada no experimento | Finalidade |
+|------------|----------------------------|------------|
+| [Spec Kit (`specify`)](https://github.com/github/spec-kit) | 0.12.8.dev0 | Workflow SDD e skill `/speckit.clarify` |
+| [Codex CLI](https://github.com/openai/codex) | 0.143.0 | Agente LLM para execução |
+| Python | 3.7.9 | Scripts de automação (stdlib apenas) |
+| Git | 2.48.1 | Controle de versão do artefato |
+
+### Modelo e configuração do agente
+
+Configuração **efetivamente registrada** nos logs de execução (`runs/*/codex-log.txt`):
+
+| Parâmetro | Valor executado |
+|-----------|-----------------|
+| Modelo | `gpt-5.5` |
+| Sandbox | `read-only` |
+| Approval | `never` |
+| Reasoning effort | `none` |
+| Reasoning summaries | `none` |
+| Web search | desabilitado (via prompt e constitution) |
+| Sessão | limpa por execução (sem histórico persistente) |
+
+A constitution experimental (`.specify/memory/constitution.md`) restringe o agente a comportamento **audit-only**: analisar apenas os arquivos fornecidos, marcar lacunas com `[NEEDS CLARIFICATION]`, produzir no máximo cinco perguntas prioritárias, e não modificar artefatos.
+
+O prompt de coleta está fixado em `scripts/clarification-gen/clarify-prompt.txt` e invoca `/speckit.clarify` em modo experimental.
+
+### Credenciais
+
+A re-execução das 24 runs requer autenticação válida no Codex CLI (acesso ao modelo configurado). As credenciais **não** estão incluídas neste repositório.
+
+---
+
+## Ambiente de execução
+
+Registre o ambiente antes de replicar. Scripts de coleta estão em [`environment/environment.md`](environment/environment.md).
+
+Ambiente original do experimento (2026-07-08):
+
+- **SO:** Windows 11 Pro (Build 26200, 64 bits)
+- **PowerShell:** 5.1.26100.8457
+- **specify:** 0.12.8.dev0
+- **codex-cli:** 0.143.0
+- **Python:** 3.7.9
+- **uv:** 0.11.16
+- **git:** 2.48.1.windows.1
+
+---
+
+## Reprodução
+
+Há dois níveis de reprodutibilidade:
+
+### Nível 1 — Reproduzir análise a partir dos artefatos coletados
+
+Use este caminho para verificar extração e estruturação dos dados **sem** reinvocar o LLM.
+
+**Windows (PowerShell):**
+
+```powershell
+cd scripts\bin
+.\check-outputs.bat
+.\extract-questions.bat
+.\build-classification-base.bat
+```
+
+**Linux / macOS:**
+
+```bash
+cd scripts/bin
+export CLARIFY_ROOT="$(cd ../.. && pwd)"
+export PYTHONPATH="$(cd .. && pwd)"
+
+python ../check-outputs/check_outputs.py
+python ../clarification-processing/extract_questions.py
+python ../clarification-processing/build_classification_base.py
+```
+
+**Saídas esperadas em `collected-data/`:**
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| `outputs-check.csv` | Verificação de existência de `output.md` por run |
+| `questions_raw.csv` | 177 perguntas brutas extraídas |
+| `classification_base.csv` | Template para classificação de lacunas normalizadas |
+| `execution-table.csv` | Metadados das 24 execuções (já presente) |
+
+### Nível 2 — Re-executar as 24 clarificações
+
+> **Atenção:** re-execuções produzirão saídas estocásticas diferentes. Os resultados deste repositório correspondem à execução única de 2026-07-09 documentada em `collected-data/execution-table.csv`.
+
+1. Clone o repositório e instale as ferramentas listadas acima.
+2. Autentique o Codex CLI.
+3. Confirme que as 24 pastas existem em `runs/` com inputs válidos.
+4. Execute o runner:
+
+**Windows:**
+
+```powershell
+cd scripts\bin
+.\run-all.bat
+```
+
+**Linux / macOS:**
+
+```bash
+cd scripts/bin
+./run-all.sh
+```
+
+O runner (`scripts/clarification-gen/runner.py`):
+
+- Descobre automaticamente todas as pastas `runs/US*_R*`
+- Embaralha a ordem de execução (controle de ordem)
+- Invoca `codex exec --sandbox read-only` com o prompt experimental
+- Extrai `clarification-full.md` do log
+- Atualiza `collected-data/execution-table.csv` incrementalmente
+- Pausa 3 s entre execuções
+
+Para regenerar apenas a tabela de execução a partir dos metadados existentes:
+
+```bash
+python scripts/clarification-gen/runner.py --build-execution-table
+```
+
+---
+
+## Pipeline de processamento
+
+```
+materials/ + baselines/
+        │
+        ▼
+   runs/ (24 execuções Codex)
+        │
+        ├──► execution-table.csv
+        │
+        ▼
+ extract_questions.py
+        │
+        ▼
+ questions_raw.csv (177 linhas)
+        │
+        ▼
+ build_classification_base.py
+        │
+        ▼
+ classification_base.csv (template de anotação)
+```
+
+### Extração de perguntas (`extract_questions.py`)
+
+Extrai perguntas de `runs/*/output.md` usando:
+
+- Marcadores `[NEEDS CLARIFICATION]`
+- Linhas terminadas em `?`
+- Deduplicação case-insensitive
+- Registro de `NO_CLARIFICATION_NEEDED` quando aplicável
+
+### Base de classificação (`build_classification_base.py`)
+
+Gera uma linha por pergunta bruta (exceto `NONE`) com campos para anotação manual:
+
+| Campo | Valores previstos |
+|-------|-------------------|
+| `Gap_Normalized` | Texto normalizado da lacuna informativa |
+| `Contextual_Category` | lexical, operational, decisional, systemic, unassociated |
+| `Coverage` | unanswered, partially_answered, already_answered/redundant |
+| `Functional_Relevance` | necessary/blocking, useful/non-blocking, non-pertinent |
+| `Adjudication_Status` | Pending (inicial) |
+
+### Unidade de análise
+
+A unidade primária de análise é a **lacuna informativa normalizada**, não a pergunta literal. Uma pergunta pode conter múltiplas lacunas; formulações distintas podem mapear à mesma lacuna.
+
+Comportamento entre condições (comparação com C0):
+
+| Comportamento | Definição |
+|---------------|-----------|
+| **Eliminated** | Aparece em C0, desaparece após contexto relevante |
+| **Persistent** | Aparece em C0 e persiste apesar de resposta no contexto |
+| **Emergent** | Não aparece em C0, surge após adição de contexto |
+| **Unchanged** | Aparece em ambas; contexto não visava resolver |
+
+
+## Resultados descritivos préliminares (perguntas brutas)
+
+Distribuição por condição em `questions_raw.csv`:
+
+| Condição | Perguntas brutas |
+|----------|-----------------|
+| C0 | 30 |
+| CL | 20 |
+| CO | 25 |
+| CD | 37 |
+| CS | 30 |
+| CT | 35 |
+| **Total** | **177** |
+
+---
+
+## Limitações conhecidas
+
+- **Amostra reduzida:** 4 User Stories, 1 execução por condição.
+- **Estocasticidade:** saídas de LLM variam entre execuções.
+- **Anotação incompleta:** lacunas normalizadas e adjudicação ainda pendentes.
+- **Sem análise inferencial:** resultados são descritivos/exploratórios.
+- **Extração heurística:** `extract_questions.py` pode capturar duplicatas textuais (ex.: mesma pergunta com e sem prefixo `[NEEDS CLARIFICATION]`) — revisão manual necessária antes da normalização.
+
+---
+
+## Licença e disponibilidade
+
+Os dados de User Stories derivam do dataset Mendeley (ver proveniência em `materials/`). Demais materiais experimentais seguem a política de disponibilidade declarada no paper (Artifact Availability).
+
+Para dúvidas sobre replicação, consulte também [`environment/environment.md`](environment/environment.md).
